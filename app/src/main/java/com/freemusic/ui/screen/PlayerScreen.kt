@@ -120,9 +120,9 @@ fun PlayerScreen(viewModel: MainViewModel) {
             IconButton(onClick = { viewModel.togglePlayMode() }) {
                 Icon(
                     when (playMode) {
-                        PlayMode.SEQUENTIAL -> Icons.Default.Repeat
-                        PlayMode.SHUFFLE -> Icons.Default.Shuffle
-                        PlayMode.REPEAT_ONE -> Icons.Default.RepeatOne
+                        PlayMode.SEQUENTIAL -> Icons.Filled.Replay
+                        PlayMode.SHUFFLE -> Icons.Filled.Shuffle
+                        PlayMode.REPEAT_ONE -> Icons.Filled.RepeatOneOn
                     },
                     contentDescription = "播放模式"
                 )
@@ -131,7 +131,7 @@ fun PlayerScreen(viewModel: MainViewModel) {
             // 上一曲
             IconButton(onClick = { viewModel.previous() }) {
                 Icon(
-                    Icons.Default.SkipPrevious,
+                    Icons.Filled.SkipPrevious,
                     contentDescription = "上一曲",
                     modifier = Modifier.size(40.dp)
                 )
@@ -144,9 +144,9 @@ fun PlayerScreen(viewModel: MainViewModel) {
             ) {
                 Icon(
                     if (playbackState is PlaybackState.Playing) 
-                        Icons.Default.Pause
+                        Icons.Filled.Pause
                     else 
-                        Icons.Default.PlayArrow,
+                        Icons.Filled.PlayArrow,
                     contentDescription = "播放/暂停",
                     modifier = Modifier.size(32.dp)
                 )
@@ -155,7 +155,7 @@ fun PlayerScreen(viewModel: MainViewModel) {
             // 下一曲
             IconButton(onClick = { viewModel.next() }) {
                 Icon(
-                    Icons.Default.SkipNext,
+                    Icons.Filled.SkipNext,
                     contentDescription = "下一曲",
                     modifier = Modifier.size(40.dp)
                 )
