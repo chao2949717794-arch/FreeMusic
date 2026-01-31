@@ -120,9 +120,9 @@ fun PlayerScreen(viewModel: MainViewModel) {
             IconButton(onClick = { viewModel.togglePlayMode() }) {
                 Icon(
                     when (playMode) {
-                        PlayMode.SEQUENTIAL -> Icons.Filled.Replay
-                        PlayMode.SHUFFLE -> Icons.Filled.Shuffle
-                        PlayMode.REPEAT_ONE -> Icons.Filled.RepeatOneOn
+                        PlayMode.SEQUENTIAL -> Icons.Filled.PlayArrow  // 顺序播放
+                        PlayMode.SHUFFLE -> Icons.Filled.MoreHoriz      // 随机播放
+                        PlayMode.REPEAT_ONE -> Icons.Filled.Loop        // 单曲循环
                     },
                     contentDescription = "播放模式"
                 )
