@@ -207,4 +207,24 @@ DEFAULT_JVM_OPTS='"-Xmx64m" "-Xms64m"'
 #   * '-Dorg.gradle.appname' is set.
 #   * The '-jar' option is added.
 
-exec "$JAVACMD" "$@"
+# Determine the application home directory
+APP_ARGS=$(save "$@")
+
+# Escape application args
+save () {
+    for i do printf %s\\n "$i" | sed "s/'/'\\\\''/g;1s/^/'/;\$s/\$/' \\\\/"  ; done
+    echo " "
+}
+
+eval "set -- $(
+        printf '%s\n' "$DEFAULT_JVM_OPTS $JAVA_OPTS $GRADLE_OPTS" |
+        xargs -n1 |
+        sed ' s~[^-[:alnum:]+,./:=@_]~\\&~g; ' |
+        tr '\n' ' '
+    )" '"$@"'
+
+exec "$JAVACMD" "$@" -Dorg.gradle.appname=$APP_BASE_NAME \
+     -classpath "$CLASSPATH" \
+     org.gradle.wrapper.GradleWrapperMain \
+     "$@"
+
