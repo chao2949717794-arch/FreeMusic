@@ -116,27 +116,6 @@ fun PlayerScreen(viewModel: MainViewModel) {
             horizontalArrangement = Arrangement.SpaceEvenly,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            // 播放模式
-            IconButton(onClick = { viewModel.togglePlayMode() }) {
-                Icon(
-                    when (playMode) {
-                        PlayMode.SEQUENTIAL -> Icons.Filled.PlayArrow  // 顺序播放
-                        PlayMode.SHUFFLE -> Icons.Filled.MoreHoriz      // 随机播放
-                        PlayMode.REPEAT_ONE -> Icons.Filled.Loop        // 单曲循环
-                    },
-                    contentDescription = "播放模式"
-                )
-            }
-            
-            // 上一曲
-            IconButton(onClick = { viewModel.previous() }) {
-                Icon(
-                    Icons.Filled.SkipPrevious,
-                    contentDescription = "上一曲",
-                    modifier = Modifier.size(40.dp)
-                )
-            }
-            
             // 播放/暂停
             FilledIconButton(
                 onClick = { viewModel.togglePlayPause() },
@@ -152,19 +131,10 @@ fun PlayerScreen(viewModel: MainViewModel) {
                 )
             }
             
-            // 下一曲
-            IconButton(onClick = { viewModel.next() }) {
-                Icon(
-                    Icons.Filled.SkipNext,
-                    contentDescription = "下一曲",
-                    modifier = Modifier.size(40.dp)
-                )
-            }
-            
             // 喜欢
             IconButton(onClick = { viewModel.toggleFavorite(currentSong) }) {
                 Icon(
-                    Icons.Default.FavoriteBorder,
+                    Icons.Filled.FavoriteBorder,
                     contentDescription = "喜欢"
                 )
             }
