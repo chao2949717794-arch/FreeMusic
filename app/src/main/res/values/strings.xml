@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">自由音</string>
+    
+    <!-- 主界面 -->
+    <string name="tab_home">首页</string>
+    <string name="tab_search">搜索</string>
+    <string name="tab_library">音乐库</string>
+    <string name="tab_settings">设置</string>
+    
+    <!-- 播放器 -->
+    <string name="play">播放</string>
+    <string name="pause">暂停</string>
+    <string name="next">下一曲</string>
+    <string name="previous">上一曲</string>
+    <string name="repeat">循环</string>
+    <string name="shuffle">随机</string>
+    <string name="like">喜欢</string>
+    <string name="unlike">取消喜欢</string>
+    
+    <!-- 搜索 -->
+    <string name="search_hint">搜索歌曲、歌手、专辑</string>
+    <string name="search_history">搜索历史</string>
+    <string name="clear_history">清除历史</string>
+    <string name="hot_search">热搜榜</string>
+    
+    <!-- 音乐库 -->
+    <string name="favorite_songs">我喜欢的音乐</string>
+    <string name="play_history">播放历史</string>
+    <string name="my_playlists">我的歌单</string>
+    <string name="create_playlist">新建歌单</string>
+    
+    <!-- 设置 -->
+    <string name="theme_mode">主题模式</string>
+    <string name="audio_quality">音质</string>
+    <string name="cache_management">缓存管理</string>
+    <string name="about">关于</string>
+    
+    <!-- 通知 -->
+    <string name="notification_channel_name">音乐播放</string>
+    <string name="notification_channel_description">显示正在播放的音乐信息</string>
+    
+    <!-- 错误提示 -->
+    <string name="error_network">网络连接失败</string>
+    <string name="error_play">播放失败</string>
+    <string name="error_search">搜索失败</string>
+    
+    <!-- 车载模式 -->
+    <string name="automotive_app_name">自由音 - 车载版</string>
+</resources>
